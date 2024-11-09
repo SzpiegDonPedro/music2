@@ -96,6 +96,8 @@ basic.pause(500)
 PLAY = false
 basic.forever(function () {
     if (PLAY == true) {
-    	
+        pins.analogWritePin(AnalogPin.P0, 1023)
+    } else if (PLAY == false) {
+        pins.analogWritePin(AnalogPin.P0, 0)
     }
 })
